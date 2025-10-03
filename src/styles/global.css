@@ -21,3 +21,14 @@ h1 {
 html, body {
   background-color: #B8B8B8;
 }
+
+.swiper-button-next,
+.swiper-navigation-icon {
+  fill: #fff !important; /* ubah warna panah */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important; /* ubah ukuran ikon */
+  font-weight: bold !important;
+}
