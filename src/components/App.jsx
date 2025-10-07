@@ -5,6 +5,7 @@ import { Flex, Box, HStack, Link, Button } from "@chakra-ui/react"
 import homePage from "../assets/homepage.jpg"
 import Navbar from "./Navbar.jsx"
 import CarouselHome from "./CarouselHome.jsx"
+import Slogan from "./Slogan.jsx"
 
 function App() {
 
@@ -68,6 +69,8 @@ function App() {
 
         <CarouselHome />
       </Flex>
+
+      <Slogan />
 
 
     </div>

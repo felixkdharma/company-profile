@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
       <Global
         styles={`
           .swiper {
-            width: 60%;
+            width: 80%;
           }
 
           .swiper-button-next, .swiper-button-prev {
@@ -23,10 +23,13 @@ createRoot(document.getElementById('root')).render(
             font-size: 28px;
           }
           .swiper-pagination-bullet-active {
-            background:#818080
+            background:#818080;
           }
           .swiper-pagination-bullet {
-            background: white
+            background: white;
+          }
+          .swiper-pagination {
+            bottom: -50px;
           }
         `}
           />
