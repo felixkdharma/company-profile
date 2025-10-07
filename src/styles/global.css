@@ -22,13 +22,10 @@ html, body {
   background-color: #B8B8B8;
 }
 
-.swiper-button-next,
-.swiper-navigation-icon {
-  fill: #fff !important; /* ubah warna panah */
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 20px !important; /* ubah ukuran ikon */
-  font-weight: bold !important;
+p {
+  font-family: "Judson", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: aliceblue;
+  font-size: 22px;
 }

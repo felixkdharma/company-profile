@@ -16,35 +16,65 @@ function CarouselHome() {
             <Swiper
                 modules={[Navigation, Pagination]}
                 navigation={true}
-                pagination={{clickable: true}}
-                >
-                <SwiperSlide>
+                pagination={{ clickable: true }}
+            >
+                <SwiperSlide
+                    position={'relative'}>
                     <Box
                         display={"flex"}
                         flexDirection={"row"}
-                        alignItems={"center"}
+                        alignItems={"flex-start"}
                         justifyContent={'center'}
                         gap={12}>
-                        <img 
+                        <img
                             src={carousel1}
                             style={{
                                 width: "500px",
                                 height: "500px",
                                 objectFit: "cover",
                                 imageRendering: "pixelated"
-                                }} />
+                            }} />
                         <Box
                             display={'flex'}
+                            width={'500px'}
                             flexDirection={'column'}>
-                            <h1> Felix </h1>
-                            <p> Kurniawan </p>
-                            <p> Kurniawan </p>
+                            <h1> The Best IT Solution 2023 </h1>
+                            <p> With our integrity and solution, our service always
+                                fulfil what customer need. Since this Company
+                                established 1999 we always give the best Services
+                                to Our Customer. </p>
                         </Box>
                     </Box>
 
                 </SwiperSlide>
-                <SwiperSlide>
-                    Felix
+                <SwiperSlide
+                    position={'relative'}>
+                    <Box
+                        display={"flex"}
+                        flexDirection={"row"}
+                        alignItems={"flex-start"}
+                        justifyContent={'center'}
+                        gap={12}>
+                        <img
+                            src={carousel1}
+                            style={{
+                                width: "500px",
+                                height: "500px",
+                                objectFit: "cover",
+                                imageRendering: "pixelated"
+                            }} />
+                        <Box
+                            display={'flex'}
+                            width={'500px'}
+                            flexDirection={'column'}>
+                            <h1> The Best IT Solution 2023 </h1>
+                            <p> With our integrity and solution, our service always
+                                fulfil what customer need. Since this Company
+                                established 1999 we always give the best Services
+                                to Our Customer. </p>
+                        </Box>
+                    </Box>
+
                 </SwiperSlide>
             </Swiper>
 

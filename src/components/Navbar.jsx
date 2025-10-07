@@ -11,7 +11,7 @@ function Navbar() {
     useEffect(() => {
 
         const handleScroll = () => {
-            if (window.scrollY > 700) {
+            if (window.scrollY > 50) {
                 setShowNavBar(true)
             } else {
                 setShowNavBar(false)
