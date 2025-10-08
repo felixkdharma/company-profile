@@ -1,76 +1,70 @@
-import { Flex, Box, Center } from "@chakra-ui/react"
-import "../styles/slogan.css"
-import idea from "../assets/idea.png"
+import { Flex, Box, Center } from "@chakra-ui/react";
+import "../styles/slogan.css";
+import idea from "../assets/idea.png";
+import balance from "../assets/balance.png";
+import holistic from "../assets/holistic.png";
+import support from "../assets/support.png";
+import focus from "../assets/focus.png";
+import CardSlogan from "./CardSlogan.jsx";
 
-function Slogan() {
+function Slogan(props) {
+  const flexWrapper = {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: "180px",
+  };
 
-    const flexWrapper = {
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
-    const imageStyle = {
-        width: "150px",
-        height: "150px",
-        objectFit: "cover",
-    }
+  const wrapperCard = {
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: "40px",
+    maxW: "1000px",
+    mx: "auto",
+    paddingTop: "50px",
+  };
 
-    const cardIcon = {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifySelf: 'center',
-        textAlign: 'center',
-        width: '250px'
-    }
+  return (
+    <section className="slogan">
+      <Flex style={flexWrapper}>
+        <div className="wrapper-slogan">
+          <Box textAlign={"center"}>
+            <h1> {props.title} </h1>
+            <p> {props.description} </p>
+          </Box>
+        </div>
 
-    const wrapperCard = {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        gap: '100px'
-    }
-
-    return (
-        <section className="slogan">
-            <Flex style={flexWrapper}>
-                <div className="wrapper-slogan">
-                    <Box
-                        textAlign={'center'}>
-                        <h1> Our Method </h1>
-                        <p> We serve our customer based on our way.
-                            We always provide the best services and best experiences. </p>
-                    </Box>
-                </div>
-
-                <Box
-                    display="grid"
-                    gridTemplateColumns="repeat(auto-fit, minmax(250px, 1fr))"
-                    gap="60px"
-                    justifyItems="center"
-                    justifyContent="center"
-                    maxW="1000px"
-                    mx="auto"
-                >
-                    {[1, 2, 3, 4, 5].map((_, index) => (
-                        <Flex
-                            key={index}
-                            flexDirection="column"
-                            alignItems="center"
-                            textAlign="center"
-                            width="250px"
-                        >
-                            <img src={idea} alt="idea" style={imageStyle} />
-                            <Box>
-                                <h2>Creative</h2>
-                                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-                            </Box>
-                        </Flex>
-                    ))}
-                </Box>
-            </Flex>
-
-        </section >
-    )
+        <Flex style={wrapperCard}>
+          <CardSlogan
+            title="Creative"
+            source={idea}
+            description="We encourage and need your Creative Innovation"
+          />
+          <CardSlogan
+            title="Balance"
+            source={balance}
+            description="We do care about work life balance"
+          />
+          <CardSlogan
+            title="Holistic"
+            source={holistic}
+            description="We are always seeking something holisticly"
+          />
+          <CardSlogan
+            title="Support"
+            source={support}
+            description="We are not leaving each other and always
+                         find solution together"
+          />
+          <CardSlogan
+            title="Focus"
+            source={focus}
+            description="We are always Focus to achieve Something Big"
+          />
+        </Flex>
+      </Flex>
+    </section>
+  );
 }
 
 export default Slogan;
