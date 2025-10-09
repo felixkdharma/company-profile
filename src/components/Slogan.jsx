@@ -12,7 +12,6 @@ function Slogan(props) {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: "180px",
   };
 
   const wrapperCard = {
@@ -53,7 +52,7 @@ function Slogan(props) {
           <CardSlogan
             title="Support"
             source={support}
-            description="We are not leaving each other and always
+            description="We are not leaving each other and
                          find solution together"
           />
           <CardSlogan
