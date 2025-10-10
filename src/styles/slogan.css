@@ -1,7 +1,9 @@
 .slogan {
-    padding: 50px;
-    max-width: 1300px;
-    margin: 0 auto;
+    background-color: #D9D9D9;
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(112, 112, 112, 0.3);
+    padding-bottom: 25px;
 }
 
 .wrapper-slogan {

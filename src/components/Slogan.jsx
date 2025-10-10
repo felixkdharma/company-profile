@@ -12,7 +12,6 @@ function Slogan(props) {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: "180px",
   };
 
   const wrapperCard = {
@@ -35,31 +34,37 @@ function Slogan(props) {
         </div>
 
         <Flex style={wrapperCard}>
+
           <CardSlogan
-            title="Creative"
-            source={idea}
-            description="We encourage and need your Creative Innovation"
-          />
-          <CardSlogan
-            title="Balance"
-            source={balance}
-            description="We do care about work life balance"
-          />
-          <CardSlogan
-            title="Holistic"
-            source={holistic}
-            description="We are always seeking something holisticly"
-          />
-          <CardSlogan
-            title="Support"
-            source={support}
-            description="We are not leaving each other and always
-                         find solution together"
-          />
-          <CardSlogan
-            title="Focus"
-            source={focus}
-            description="We are always Focus to achieve Something Big"
+            items={[
+              {
+                title: "Creative",
+                source: idea,
+                description: "We encourage and need your Creative Innovation"
+              },
+              {
+                title: "Balance",
+                source: balance,
+                description: "We do care about work life balance",
+              },
+              {
+                title: "Holistic",
+                source: holistic,
+                description: "We are always seeking something holisticly"
+              },
+              {
+                title: "Support",
+                source: support,
+                description: `We are not leaving each other and
+                         find solution together`
+              },
+              {
+                title: "Focus",
+                source: focus,
+                description: "We are always Focus to achieve Something Big"
+              }
+
+            ]}
           />
         </Flex>
       </Flex>

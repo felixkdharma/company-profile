@@ -1,11 +1,11 @@
 import "../styles/global.css";
 import "../styles/home.css";
-import { useEffect, useState } from "react";
-import { Flex, Box, HStack, Link, Button } from "@chakra-ui/react";
-import homePage from "../assets/homepage.jpg";
+import { Flex, Box } from "@chakra-ui/react";
+import homePage from "../assets/homepage-2.jpg";
 import Navbar from "./Navbar.jsx";
 import CarouselHome from "./CarouselHome.jsx";
 import Slogan from "./Slogan.jsx";
+import Services from "./Services.jsx";
 
 function App() {
   const flexDirection = {
@@ -24,7 +24,7 @@ function App() {
       <Box
         bgImage={`url(${homePage})`}
         bgSize="cover"
-        backgroundPosition="center"
+        bgPos="center"
         bgRepeat={"no-repeat"}
         h="100vh"
         w="100%"
@@ -58,15 +58,19 @@ function App() {
       {/* Navbar */}
       <Navbar />
 
+      {/* Carousel */}
       <Flex paddingTop={"150px"} flexDirection={"row"}>
         <CarouselHome />
       </Flex>
 
+      {/* Slogan */}
       <Slogan
         title="Our Culture"
         description="We serve our customer based on our way. We always provide the best
               services and best experiences."
       />
+      {/* Services */}
+      <Services />
     </div>
   );
 }
