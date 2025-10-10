@@ -18,6 +18,29 @@ function Services() {
             <h1> Our Services </h1>
             <Flex style={wrapperCard}>
                 <CardServices
+                    items={[
+                        {
+                            title: "IT Solution",
+                            source: solution,
+                            description: "We Provide Solution to solve Your Bussiness Needed",
+                            footer: "Browse for more"
+                        },
+                        {
+
+                            title: "Cloud Storage",
+                            source: cloud,
+                            description: "Connect your data with any platforms with Cloud Storage",
+                            footer: "Browse for more"
+                        },
+                        {
+                            title: "Outsourcing",
+                            source:  employee ,
+                            description: "We can give you man power with the best on their expertise",
+                            footer: ""
+                        }
+                    ]}
+                />
+                {/* <CardServices
                     title="IT Solution"
                     source={solution}
                     description="We Provide Solution to solve Your Bussiness Needed"
@@ -31,7 +54,7 @@ function Services() {
                     title="Outsourcing"
                     source={employee}
                     description="We can give you man power with the best on their expertise"
-                    footer="" />
+                    footer="" /> */}
             </Flex>
 
         </section>
