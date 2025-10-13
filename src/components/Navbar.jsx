@@ -7,7 +7,9 @@ import companyLogo from "../assets/company-logo.png"
 function Navbar() {
 
     const [showNavBar, setShowNavBar] = useState(false);
-
+    const navbarStyle= {
+        paddingRight: "20px"
+    }
     useEffect(() => {
 
         const handleScroll = () => {
@@ -51,7 +53,7 @@ function Navbar() {
             <p style={{ color: "white" }}> PT Kurnia Dharma </p>
 
         </Box>
-        <HStack spacing={4}>
+        <HStack spacing={4} style={navbarStyle}>
             <Link color="white">Home</Link>
             <Link color="white">About</Link>
             <Link color="white">Contact</Link>

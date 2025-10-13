@@ -5,7 +5,6 @@ function CardSlogan(props) {
 
   const wrapperCardSlogan = {
     flexDirection: "row",
-    alignItems: "center",
     textAlign: "center",
   };
 

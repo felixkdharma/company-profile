@@ -6,6 +6,7 @@ import Navbar from "./Navbar.jsx";
 import CarouselHome from "./CarouselHome.jsx";
 import Slogan from "./Slogan.jsx";
 import Services from "./Services.jsx";
+import AboutUs from  "./AboutUs.jsx";
 
 function App() {
   const flexDirection = {
@@ -71,6 +72,9 @@ function App() {
       />
       {/* Services */}
       <Services />
+
+      {/* About Us */}
+      <AboutUs />
     </div>
   );
 }
