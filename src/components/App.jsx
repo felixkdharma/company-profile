@@ -7,6 +7,7 @@ import CarouselHome from "./CarouselHome.jsx";
 import Slogan from "./Slogan.jsx";
 import Services from "./Services.jsx";
 import AboutUs from  "./AboutUs.jsx";
+import Ceo from "./Ceo.jsx";
 
 function App() {
   const flexDirection = {
@@ -75,6 +76,9 @@ function App() {
 
       {/* About Us */}
       <AboutUs />
+
+      {/* CEO */}
+      <Ceo/>
     </div>
   );
 }
