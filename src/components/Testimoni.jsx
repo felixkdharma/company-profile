@@ -13,6 +13,11 @@ function Testimoni() {
                             description: "Great Service, Very Recommended",
                             name: "John Doe",
                             position: "CEO of BCA Group"
+                        },
+                        {
+                            description: "Professional and Reliable Partner",
+                            name: "Jane Smith",
+                            position: "CTO of Lotte Corp"
                         }
                     ]}
                 />
