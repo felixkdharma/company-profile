@@ -9,6 +9,7 @@ import Services from "./Services.jsx";
 import AboutUs from  "./AboutUs.jsx";
 import Ceo from "./Ceo.jsx";
 import PartOfUs from "./PartOfUs.jsx";
+import Testimoni from "./Testimoni.jsx";
 
 function App() {
   const flexDirection = {
@@ -83,6 +84,9 @@ function App() {
 
       {/* Part Of Us */}
       <PartOfUs/>
+
+      {/* Testimoni */}
+      <Testimoni/>
       
     </div>
   );
