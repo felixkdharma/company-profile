@@ -12,12 +12,6 @@ function CardCeo(props) {
         gap: "150px"
     }
 
-    const imageStyle = {
-        fit: "cover",
-        boxSize: "200px",
-        borderRadius: "full"
-    }
-
     const profileWrapper = {
         flexDirection: "column",
         alignItems: "center",
@@ -36,12 +30,9 @@ function CardCeo(props) {
 
                     <Box>
                         <h2> {profile.name} </h2>
-
+                        <h2> as {profile.department}</h2>
                     </Box>
                 </Flex>
-
-
-
             ))}
         </Flex>
     )

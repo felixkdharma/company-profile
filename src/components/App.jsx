@@ -8,6 +8,7 @@ import Slogan from "./Slogan.jsx";
 import Services from "./Services.jsx";
 import AboutUs from  "./AboutUs.jsx";
 import Ceo from "./Ceo.jsx";
+import PartOfUs from "./PartOfUs.jsx";
 
 function App() {
   const flexDirection = {
@@ -79,6 +80,10 @@ function App() {
 
       {/* CEO */}
       <Ceo/>
+
+      {/* Part Of Us */}
+      <PartOfUs/>
+      
     </div>
   );
 }
