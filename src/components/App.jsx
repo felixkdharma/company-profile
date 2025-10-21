@@ -10,6 +10,7 @@ import AboutUs from  "./AboutUs.jsx";
 import Ceo from "./Ceo.jsx";
 import PartOfUs from "./PartOfUs.jsx";
 import Testimoni from "./Testimoni.jsx";
+import Footer from "./Footer.jsx";
 
 function App() {
   const flexDirection = {
@@ -88,6 +89,8 @@ function App() {
       {/* Testimoni */}
       <Testimoni/>
       
+      {/* */}
+      <Footer />
     </div>
   );
 }

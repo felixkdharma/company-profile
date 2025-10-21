@@ -8,13 +8,21 @@ function CardTestmoni(props) {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        gap: "150px",
         paddingTop: "50px"
     }
 
     const contentWrapper = {
-        maxWidth: "1000px",
+        maxWidth: "1800px",
         flexWrap: "wrap",
+        gap: "40px",
+    }
+
+    const cardStyle = {
+        flexDirection: "row",
+        overFlow: "hidden",
+        maxw: "xl",
+        bg: "#6c6c6c",
+        margin: "0 auto" 
     }
     return (
         <Flex style={cardWrapper}>
@@ -22,19 +30,22 @@ function CardTestmoni(props) {
             <Flex style={contentWrapper}>
 
                 {props.testimoni.map((item, index) => (
-                    <Card.Root flexDirection="row" overflow="hidden" maxW="xl" bg="#6C6C6C">
+                    <Card.Root  flexDirection="row" overflow="hidden" maxW="md" bg="#6C6C6C" margin="0 auto">
                         <Image
                             objectFit="cover"
                             maxW="200px"
-                            src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
-                            alt="Caffe Latte"
+                            src={item.source}
+                            alt="profile"
+                            borderRadius="full"
+                            boxSize="170px"
+                            padding="5"
                         />
                         <Box>
                             <Card.Body>
                                 <Card.Title mb="2">
                                     <h2> {item.name} </h2>
                                 </Card.Title>
-                                <Card.Description pt="2">
+                                <Card.Description pt="2" maxW={"250px"}>
                                     {item.description}
                                 </Card.Description>
 
