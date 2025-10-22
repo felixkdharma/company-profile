@@ -30,7 +30,7 @@ function CardTestmoni(props) {
             <Flex style={contentWrapper}>
 
                 {props.testimoni.map((item, index) => (
-                    <Card.Root  flexDirection="row" overflow="hidden" maxW="md" bg="#6C6C6C" margin="0 auto">
+                    <Card.Root borderRadius={"15px"} flexDirection="row" overflow="hidden" maxW="md" bg="#6C6C6C" margin="0 auto">
                         <Image
                             objectFit="cover"
                             maxW="200px"
