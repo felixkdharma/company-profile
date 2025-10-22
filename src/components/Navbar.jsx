@@ -1,7 +1,7 @@
 import "../styles/global.css"
 import "../styles/home.css"
 import { useEffect, useState } from "react"
-import { Flex, Box, HStack, Link, Button } from "@chakra-ui/react"
+import { Flex, Box, HStack, Link } from "@chakra-ui/react"
 import companyLogo from "../assets/company-logo.png"
 
 function Navbar() {
@@ -24,6 +24,30 @@ function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
 
     }, [])
+
+    const goToHome = () => {
+        document.getElementById("home").scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    const goToAboutUs = () => {
+        document.getElementsByClassName("aboutus-section")[0].scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    const goToServices = () => {
+        document.getElementById("services").scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    const goToContact = () => {
+        document.getElementsByClassName("section-wrapper")[2].scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
 
     return (<Flex
         justify="space-between"
@@ -54,9 +78,10 @@ function Navbar() {
 
         </Box>
         <HStack spacing={4} style={navbarStyle}>
-            <Link color="white">Home</Link>
-            <Link color="white">About</Link>
-            <Link color="white">Contact</Link>
+            <Link color="white" onClick={goToHome}>Home</Link>
+            <Link color="white" onClick={goToAboutUs}>About</Link>
+            <Link color="white" onClick={goToServices}> Services</Link>
+            <Link color="white" onClick={goToContact}>Contact</Link>
         </HStack>
     </Flex>)
 }
