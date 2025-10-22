@@ -6,7 +6,7 @@ import Navbar from "./Navbar.jsx";
 import CarouselHome from "./CarouselHome.jsx";
 import Slogan from "./Slogan.jsx";
 import Services from "./Services.jsx";
-import AboutUs from  "./AboutUs.jsx";
+import AboutUs from "./AboutUs.jsx";
 import Ceo from "./Ceo.jsx";
 import PartOfUs from "./PartOfUs.jsx";
 import Testimoni from "./Testimoni.jsx";
@@ -64,9 +64,12 @@ function App() {
       <Navbar />
 
       {/* Carousel */}
-      <Flex paddingTop={"150px"} flexDirection={"row"}>
-        <CarouselHome />
-      </Flex>
+      <section id="home">
+        <Flex paddingTop={"150px"} flexDirection={"row"}>
+          <CarouselHome />
+        </Flex>
+      </section>
+
 
       {/* Slogan */}
       <Slogan
@@ -81,14 +84,14 @@ function App() {
       <AboutUs />
 
       {/* CEO */}
-      <Ceo/>
+      <Ceo />
 
       {/* Part Of Us */}
-      <PartOfUs/>
+      <PartOfUs />
 
       {/* Testimoni */}
-      <Testimoni/>
-      
+      <Testimoni />
+
       {/* */}
       <Footer />
 
