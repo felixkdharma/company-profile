@@ -6,15 +6,17 @@ function CardFooter(props) {
     const cardWrapper = {
         flexDirection: "coloumn",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        
     }
 
     return (
-        <Flex style={cardWrapper}>
+        <div >
+            <p style={{marginBottom: "50px"}} > {props.items[0].section == "inquiry" ? "GROW YOUR BUSSINESS WITH US." : "FOLLOW OUR SOCIAL MEDIA." } </p>
             {props.items.map((item, index) => {
                 const Icon = item.source;
                 return (
-                    <Flex flexDirection="column">
+                    <Flex style={cardWrapper} >
                         <Flex flexDirection="row">
                             <Icon size="30" />
                             <p style={{ paddingLeft: "10px" }}> {item.description} </p>
@@ -22,7 +24,8 @@ function CardFooter(props) {
                     </Flex>
                 )
             })}
-        </Flex>
+            
+        </div>
     )
 }
 

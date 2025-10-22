@@ -1,9 +1,13 @@
 import { Flex, Box, Grid } from "@chakra-ui/react"
-import { MdEmail, MdPhone } from "react-icons/md";
+import { MdEmail, MdPhone, MdWhatsapp, MdFacebook} from "react-icons/md";
+import { FaInstagram } from "react-icons/fa";
 import CardFooter from "./CardFooter.jsx";
 import "../styles/global.css"
 
 function Footer() {
+
+    const today = new Date();
+    const getYear = today.getFullYear();
 
     return (
         <section className="section-wrapper">
@@ -32,12 +36,17 @@ function Footer() {
                         <CardFooter
                             items={[
                                 {
+                                    section: "inquiry",
                                     description: "kurniadharma@gmail.com",
                                     source: MdEmail
                                 },
                                 {
-                                    description: "+628123456789",
+                                    description: "+62123456789",
                                     source: MdPhone
+                                },
+                                {
+                                    description: "+6280987654321",
+                                    source: MdWhatsapp
                                 }
                             ]}
                         />
@@ -45,10 +54,24 @@ function Footer() {
 
                     <Box>
                         <h2> Social Media </h2>
+                        <CardFooter
+                            items={[
+                                {
+                                    section: "social",
+                                    description: "kurnia_dharma",
+                                    source: MdFacebook
+                                },
+                                {
+                                    description: "kurnia_dharma",
+                                    source: FaInstagram
+                                }
+                            ]}
+                        />
 
                     </Box>
 
                 </Grid>
+                <p> © Copyright {getYear} </p>
             </div>
         </section>
     )
