@@ -11,10 +11,6 @@ createRoot(document.getElementById('root')).render(
     <ChakraProvider value={defaultSystem}>
       <Global
         styles={`
-          .swiper {
-            width: 80%;
-          }
-
           .swiper-button-next, .swiper-button-prev {
             color: #FFFFFF;
           }
