@@ -36,24 +36,29 @@ function App() {
       >
         <div className="title">
           <Flex
-            gap={{ "2xl": 12, xl: 12 }}
+            gap={{ "base": 10, "2xl": 12, xl: 12 }}
             alignItems={"center"}
             justifyContent={"center"}
             flexDirection={flexDirection}
-            marginLeft={"5vw"}
+            marginLeft={"10vw"}
           >
-            <Box w="300px" marginTop={"30vh"} marginLeft={marginLeftCompany}>
+            <Box 
+              w="300px" 
+              marginTop={{"base": "20vh", "2xl": "38vh"}} 
+              marginLeft={marginLeftCompany}>
               <h1> PT Kurnia Dharma </h1>
             </Box>
 
-            <Box w="400px" marginTop={"40vh"} paddingLeft={"25px"}>
+            <Box 
+              w={{"2xl":"700px" }} 
+              marginTop={{"2xl":"40vh"}} 
+              paddingLeft={{"base": "16vw", "2xl": "5vw"}}>
               <h1
                 style={{
                   fontStyle: "italic",
                 }}
               >
-                {" "}
-                Flexibel Creative Innovative{" "}
+                Flexibel Creative Innovative
               </h1>
             </Box>
           </Flex>
@@ -65,7 +70,11 @@ function App() {
 
       {/* Carousel */}
       <section id="home">
-        <Flex paddingTop={"150px"} flexDirection={"row"}>
+        <Flex 
+          paddingTop={"150px"} 
+          flexDirection={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}>
           <CarouselHome />
         </Flex>
       </section>
