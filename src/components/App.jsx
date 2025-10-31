@@ -21,7 +21,8 @@ function App() {
   };
 
   const marginLeftCompany = {
-    md: "55px",
+    sm: "50px",
+    md: "5vw",
   };
 
   return (
@@ -36,7 +37,12 @@ function App() {
       >
         <div className="title">
           <Flex
-            gap={{ "base": 10, "2xl": 12, xl: 12 }}
+            gap={{ 
+              "base": 10,
+              "sm" : 5,
+              "xl": 12, 
+              "2xl": 12, 
+               }}
             alignItems={"center"}
             justifyContent={"center"}
             flexDirection={flexDirection}
@@ -44,15 +50,24 @@ function App() {
           >
             <Box 
               w="300px" 
-              marginTop={{"base": "20vh", "2xl": "38vh"}} 
+              marginTop={{
+                "base": "20vh",
+                "sm" : "30vh", 
+                "2xl": "38vh"}} 
               marginLeft={marginLeftCompany}>
               <h1> PT Kurnia Dharma </h1>
             </Box>
 
             <Box 
               w={{"2xl":"700px" }} 
-              marginTop={{"2xl":"40vh"}} 
-              paddingLeft={{"base": "16vw", "2xl": "5vw"}}>
+              marginTop={{
+                "sm" : "30vh",
+                "2xl":"40vh"
+              }} 
+              paddingLeft={{
+                "base": "16vw",
+                "sm" : "5vw", 
+                "2xl": "5vw"}}>
               <h1
                 style={{
                   fontStyle: "italic",
