@@ -1,10 +1,17 @@
-import { Flex, Box, Center } from "@chakra-ui/react";
+import { Flex, Box, Center, useBreakpointValue } from "@chakra-ui/react";
 import "../styles/global.css";
 
 function CardAboutus(props) {
 
+    const flexDirection = useBreakpointValue({base:"column", "2xl": "row"});
+    const overflowY= useBreakpointValue({base: "auto"});
+    const marginTop= useBreakpointValue({base: "30px"});
+    const maxH= useBreakpointValue({base: "250px"});
+    const paddingLeft= useBreakpointValue({"2xl": "35px"});
+    const width= useBreakpointValue({base: "350px"});
+
     const cardStyle = {
-        flexDirection: "row",
+        flexDirection,
         justifyContent: "center",
         alignItems: "flex-start",
         padding: "75px"
@@ -17,10 +24,16 @@ function CardAboutus(props) {
         borderRadius: "15px"
     }
 
-    const paragraphStyle = {
-        paddingLeft: "35px",
-        textAlign: "left"
+    const textWrapper = {
+        overflowY,
+        marginTop,
+        maxHeight: maxH
+    }
 
+    const paragraphStyle = {
+        paddingLeft,
+        width,
+        textAlign: "left"
     }
 
 
@@ -33,8 +46,11 @@ function CardAboutus(props) {
                 style={imageStyle}
             />
 
-            <p style={paragraphStyle}> {props.description} </p>
-            
+            <Box style={textWrapper}>
+                <p style={paragraphStyle}> {props.description} </p>
+
+            </Box>
+
         </Flex>
     )
 }

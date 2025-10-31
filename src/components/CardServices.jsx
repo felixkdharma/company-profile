@@ -1,11 +1,11 @@
-import { Card, Flex, Image } from "@chakra-ui/react"
+import { Card, Flex, Image, useBreakpointValue } from "@chakra-ui/react"
 import "../styles/global.css";
 
 function CardServices(props) {
 
     const cardWrapper =
     {
-        flexDirection: "row",
+        flexDirection: useBreakpointValue({base: "column", "2xl": "row"}),
         alignItems: "center",
         gap: "40px"
 

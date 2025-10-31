@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, useBreakpointValue  } from "@chakra-ui/react";
+import { Flex, Box, Heading, useBreakpointValue, Text } from "@chakra-ui/react";
 import "../styles/global.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -12,7 +12,8 @@ function CardCarousel(props) {
     {
         alignItems: "center",
         justifyContent: "center",
-        gap: 12
+        gap: 12,
+        flexWrap: "wrap"
     }
 
     const textBoxWrapper =
@@ -21,51 +22,59 @@ function CardCarousel(props) {
         alignItems: "start",
         justifyContent: "center",
         height: "300px",
-        gap: 10
-
+        gap: 12
     }
 
+    const headingTag = useBreakpointValue({base: "h2", "2xl": "h1"})
+    const paddingBottom = useBreakpointValue({base: "12vh", "2xl": "7vh"})
     return (
         <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
+            autoplay={{delay: 4000}}
+            breakpoints={{  
+                481: { slidesPerView: 1 }
+            }}
             style={{
-                paddingBottom: "7vh",
+                paddingBottom: paddingBottom,
             }}
         >
             {props.cards.map((card, index) => (
-                <div>
-                    <SwiperSlide
-                    >
+                <SwiperSlide
+                >
+                    <Flex
+                        style={swiperWrapper}>
+                        <img
+                            src={card.source}
+                            width={"400px"}
+                            height={"400px"}
+                        />
                         <Flex
-                            style={swiperWrapper}>
-                            <img
-                                src={card.source}
-                                width={"400px"}
-                                height={"400px"}
-                            />
-                            <Flex
-                                style={textBoxWrapper}>
-                                <Box
-                                    width={{"base": "300px", "2xl": "700px"}}
-                                    minH={"120px"}>
-                                    <Heading
-                                        as={"h1"}
-                                        lineHeight={"normal"}>
-                                        {card.title}
-                                    </Heading>
-                                    {/* <h1> {card.title} </h1> */}
-                                    <p> {card.desc} </p>
+                            style={textBoxWrapper}>
+                            <Box
+                                width={{ "base": "350px", "2xl": "700px" }}
+                                minH={"150px"}>
+                                <Heading
+                                    as={headingTag}
+                                    lineHeight={"normal"}>
+                                    {card.title}
+                                </Heading>
+                                {/* <h1> {card.title} </h1> */}
+                                <Text
+                                    as="p">
+                                    {card.desc}
+                                </Text>
+                                {/* <p> {card.desc} </p> */}
 
-                                </Box>
-                                {/* <Box
+                            </Box>
+                            {/* <Box
                                     width={"800px"}>
                                     <p> {card.desc} </p>
                                 </Box> */}
-                            </Flex>
                         </Flex>
-                    </SwiperSlide>
-                </div>
+                    </Flex>
+                </SwiperSlide>
+
             ))}
         </Swiper>
     )

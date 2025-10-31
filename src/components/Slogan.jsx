@@ -34,7 +34,6 @@ function Slogan(props) {
         </div>
 
         <Flex style={wrapperCard}>
-
           <CardSlogan
             items={[
               {

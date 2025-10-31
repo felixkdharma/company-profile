@@ -1,12 +1,16 @@
-import { Flex, Box, Center } from "@chakra-ui/react";
+import { Flex, Box, Center, useBreakpointValue } from "@chakra-ui/react";
 import "../styles/slogan.css";
 
 function CardSlogan(props) {
 
   const wrapperCardSlogan = {
-    flexDirection: "row",
+    flexDirection: useBreakpointValue({base:"column", "2xl": "row"}),
     textAlign: "center",
   };
+
+  const wrapSlogan = useBreakpointValue({
+    base: "wrap",
+  })
 
   const cardSlogan = {
     flexDirection: "column",
