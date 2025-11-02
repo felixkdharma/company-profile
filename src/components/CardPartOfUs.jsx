@@ -9,7 +9,11 @@ function CardPartOfUs(props) {
             justifyContent={"center"}
             alignItems={"center"}
             gap={12}
-            paddingTop={"50px"}>
+            flexWrap={{base: "wrap"}}
+            w="100%" // ✅ biar fleksibel, tidak dibatasi maxW
+            maxW="900px" // optional, kalau mau ada batas lebar total
+            mx="auto" // center horizontal
+            paddingTop="50px">
 
             {props.items.map((item, index) => (
                 <Box

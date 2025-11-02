@@ -1,5 +1,5 @@
-import { Flex, Box, Grid } from "@chakra-ui/react"
-import { MdEmail, MdPhone, MdWhatsapp, MdFacebook} from "react-icons/md";
+import { Flex, Box, Grid, useBreakpointValue } from "@chakra-ui/react"
+import { MdEmail, MdPhone, MdWhatsapp, MdFacebook } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 import CardFooter from "./CardFooter.jsx";
 import "../styles/global.css"
@@ -8,13 +8,27 @@ function Footer() {
 
     const today = new Date();
     const getYear = today.getFullYear();
+    const templateResponsive = useBreakpointValue({
+         base: "1fr",
+        "2xl" : "repeat(3, 1fr)" })
+    const templateAreaResponsive = useBreakpointValue({
+        base:`"location"
+                "inquiry"
+                "social"`,
+        "2xl" : `"location inquiry social"`,
+
+    })
 
     return (
         <section className="section-wrapper">
             <div className="content-wrapper">
                 <Grid
-                    templateColumns="repeat(3, 1fr)" gap="5" pt="5"
-                    templateAreas={`"location inquiry social"`}>
+                    templateColumns={templateResponsive} 
+                    gap="10" 
+                    pt="5"
+                    templateAreas={templateAreaResponsive}
+                    // templateAreas={`"location inquiry social"`}
+                    >
                     <Box gridArea="location">
                         <h2> Location </h2>
                         <Box as="iframe"
